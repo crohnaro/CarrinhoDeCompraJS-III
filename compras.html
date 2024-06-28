@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Ofertas</h1>
+    <div class="products">
+        <div class="product">
+            <img src="img/56XXW1ipbsn8jTLDZC6dyPPMYheKU9B0i3ibE27d.jpg" alt="Refrigerante Coca Cola 2L">
+            <h2>Coca Cola</h2>
+            <p>Refrigerante Coca Cola 2 Litros</p>
+            <p>Preço: R$ 12,00</p>
+            <div class="button-container">
+                <button onclick="addToCart('Coca Cola', 12)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="img/1701_1.jpg" alt="Refrigerante Pepsi Lata 350ml">
+            <h2>Pepsi</h2>
+            <p>Refrigerante Pepsi Lata 350ml</p>
+            <p>Preço: R$ 7,00</p>
+            <div class="button-container">
+                <button onclick="addToCart('Pepsi', 7)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="img/Ruffles.png" alt="Salgadinho Ruffles 76g">
+            <h2>Ruffles</h2>
+            <p>Salgadinho Ruffles 76g</p>
+            <p>Preço: R$ 8,50</p>
+            <div class="button-container">
+                <button onclick="addToCart('Ruffles', 8.5)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="img/fandangos.png" alt="Salgadinho Fandangos 45g">
+            <h2>Fandangos</h2>
+            <p>Salgadinho Fandangos 45g</p>
+            <p>Preço: R$ 3,99</p>
+            <div class="button-container">
+                <button onclick="addToCart('Fandangos', 3.99)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="img/402.png" alt="Ketchup Heinz 397g">
+            <h2>Ketchup</h2>
+            <p>Ketchup Heinz 397g</p>
+            <p>Preço: R$ 14,00</p>
+            <div class="button-container">
+                <button onclick="addToCart('Ketchup', 14)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="img/clear.png" alt="Shampoo Clear Men 400ml">
+            <h2>Clear Men</h2>
+            <p>Shampoo Clear Men 400ml</p>
+            <p>Preço: R$ 18,89</p>
+            <div class="button-container">
+                <button onclick="addToCart('Shampoo Clear Men', 18.89)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="img/shampoo-anticaspa-head-and-shoulders-menthol-refrescante-200ml-2b9.jpg" alt="Shampoo Head & Shoulders 200ml">
+            <h2>Head & Shoulders</h2>
+            <p>Shampoo Head & Shoulders 200ml</p>
+            <p>Preço: R$ 16,50</p>
+            <div class="button-container">
+                <button onclick="addToCart('Shampoo Head & Shoulders', 16.50)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="img/l-0bb27cf2a14c450ead9ab29f0fa2b4d1.jpeg" alt="Maionese Heinz 390g">
+            <h2>Maionese</h2>
+            <p>Maionese Heinz 390g</p>
+            <p>Preço: R$ 26,00</p>
+            <div class="button-container">
+                <button onclick="addToCart('Maionese Heinz', 26)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="img/7891095031696.png" alt="Batata Palha Yoki Tradicional 105g">
+            <h2>Batata Palha</h2>
+            <p>Batata Palha Yoki Tradicional 105g</p>
+            <p>Preço: R$ 6,99</p>
+            <div class="button-container">
+                <button onclick="addToCart('Batata Palha Yoki', 6.99)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="img/agua.png" alt="Água com Gás Passa Quatro 2L">
+            <h2>Água com Gás</h2>
+            <p>Água com Gás Passa Quatro 2L</p>
+            <p>Preço: R$ 3,99</p>
+            <div class="button-container">
+                <button onclick="addToCart('Água com Gás', 3.99)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <button class="cart-button" onclick="toggleCart()">🛒 Ver Carrinho</button>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <ul id="cart">
+                <!-- Itens do carrinho serão adicionados aqui -->
+            </ul>
+            <p>Total: R$ <span id="total">0,00</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
