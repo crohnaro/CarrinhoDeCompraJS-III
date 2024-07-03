@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Carrinho de Compras</h1>
+    <div class="products">
+        <div class="product">
+            <img src="IMG/charizard.jpg" alt="Produto 1">
+            <h2>Pacote Charizard Ultra Raro</h2>
+            <p>50 Cartões Pokemon | Bônus 7 Holos | Autêntico | GG Deck Box Compatível Inclui 1x Charizard, juntamente com 49 Cartões Pokemon variados em cada pacote, garantido.</p>
+            <p>Preço: R$ 105,00</p>
+            <button onclick="addToCart('Pacote Charizard Ultra Raro', 105)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="IMG/lucario2" alt="Produto 2">
+            <h2>Carta Lucario</h2>
+            <p>Lucario foi um dos Pokémons principais do Filme Lucario e o Misterio de Mew. Ele pertencia a Sir Aaron e foi selado por mil anos. 
+                Ele foi despertado por Ash durante um festival, e ajudou a orientá-lo para a Árvore da Vida após Pikachu ter sido teletransportado para lá por Mew.</p>
+            <p>Preço: R$ 50,00</p>
+            <button onclick="addToCart('Carta Lucario', 50)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="IMG/greninja.webp" alt="Produto 3">
+            <h2>Carta Greninja V3</h2>
+            <p>Gotejo: 40 damage. Estrela Ninja Dançante: 80x damage. Jogue 3 moedas. Este ataque causa 80 pontos de dano para cada cara. Weakness: Lightning x2 Resistance: none Retreat Cost: 2</p>
+            <p>Preço: R$ 30,00</p>
+            <button onclick="addToCart('Carta Greninja V3', 30)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="IMG/Lugia.JPG" alt="Produto 4">
+            <h2>Carta Lugia</h2>
+            <p>Uma única carta colecionável do jogo de cartas colecionáveis e de troca Pokémon (TCG/CCG). Esta é uma carta de raridade Holo Rare. Do conjunto Legendary Treasures. Você receberá a versão holográfica desta carta.</p>
+            <p>Preço: R$ 115,00</p>
+            <button onclick="addToCart('Carta Lugia', 115)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="IMG/mega lucario.jpg" alt="Produto 5">
+            <h2>Mega Lucario</h2>
+            <p>U sola carta individual del juego de cartas colecciobles y coleccionables de Pokémon (TCG/CCG).
+                E es de Holo Rare ex rarity.
+                Del juego XY Furious Fi.
+                Recibirás la versión Holo de esta tarjeta.</p>
+            <p>Preço: R$ 700,00</p>
+            <button onclick="addToCart('Carta Suicune V', 700)">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <button class="cart-button" onclick="toggleCart()">🛒 Ver Carrinho</button>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <ul id="cart">
+                <!-- Itens do carrinho serão adicionados aqui -->
+            </ul>
+            <p>Total: R$ <span id="total">0,00</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
